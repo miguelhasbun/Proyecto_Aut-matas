@@ -17,5 +17,30 @@ namespace Proyecto_Autómatas
             tran = t;
         }
 
+        public Estados(string name_State)
+        {
+            estado = name_State;
+            tran = new List<Transiciones>();
+        }
+
+        public string getallstates()
+        {
+            string concate="";
+            for (int i=0; i<tran.Count; i++)
+            {
+                concate += tran[i];
+                if (i != tran.Count - 1)
+                {
+                    concate += ",";
+                }
+            }
+            return concate;
+        }
+        public void addtransition(string entry, string new_state)
+        {
+            tran.Add(new Transiciones(entry, new_state));
+
+        }
+
     }
 }
