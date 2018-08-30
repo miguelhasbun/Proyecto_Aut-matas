@@ -90,6 +90,7 @@
       <DependentUpon>NFA.cs</DependentUpon>
     </Compile>
     <Compile Include="NFA_E.cs" />
+    <Compile Include="NFA_Epsilon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transiciones.cs" />

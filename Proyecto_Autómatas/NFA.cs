@@ -119,7 +119,7 @@ namespace Proyecto_Autómatas
         private void btnconvert_Click(object sender, EventArgs e)
         {
             createnfa();
-            MessageBox.Show("NFA CREADO");
+            MessageBox.Show("DFA CREADO");
         }
 
         private void txtnumestadosnfa_TextChanged(object sender, EventArgs e)
