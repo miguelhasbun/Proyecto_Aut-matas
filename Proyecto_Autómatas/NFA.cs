@@ -13,6 +13,7 @@ namespace Proyecto_Autómatas
     public partial class NFA : Form
     {
         NFA_E nfa;
+        private string vacio = "ø";
         public NFA()
         {
             InitializeComponent();
@@ -65,6 +66,10 @@ namespace Proyecto_Autómatas
 
                 for (int j = 1; j < dgt1.ColumnCount; j++)
                 {
+                    if (dgt1.Rows[i].Cells[j].Value == null)
+                    {
+                        dgt1.Rows[i].Cells[j].Value = vacio;
+                    }
                     string[] tmpdt = dgt1.Rows[i].Cells[j].Value.ToString().Split(',');
                     for (int t=0; t < tmpdt.Length; t++)
                     {
@@ -140,6 +145,24 @@ namespace Proyecto_Autómatas
         private void btnguardar_Click(object sender, EventArgs e)
         {
             generatetable();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+            Form1 frm = new Form1();
+            nfa.getalltransicionesDFA();
+            nfa.getstatefinales();
+            ManagerDFA ry = nfa.converttodfa();
+            frm.setdfamanager(ry);
+            frm.cargartableDFA();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

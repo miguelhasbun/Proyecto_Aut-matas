@@ -38,7 +38,7 @@ namespace Proyecto_Autómatas
         }
         public void addtransition(string entry, string new_state)
         {
-            tran.Add(new Transiciones(entry, new_state));
+            tran.Add(new Transiciones(estado, entry, new_state));
 
         }
         public Transiciones[] getransicion()
@@ -48,6 +48,19 @@ namespace Proyecto_Autómatas
         public Transiciones[] getransicion(string [] alfabeto)
         {
             return unirtrans(alfabeto);
+        }
+
+        public Transiciones[] getAllTrancionesConEntry(String entry)
+        {
+            List<Transiciones> tmp_transicciones = new List<Transiciones>();
+            foreach (Transiciones t in tran)
+            {
+                if (t.arista==(entry))
+                {
+                    tmp_transicciones.Add(t);
+                }
+            }
+            return tmp_transicciones.ToArray();
         }
 
 

@@ -89,6 +89,12 @@
     <Compile Include="NFA.Designer.cs">
       <DependentUpon>NFA.cs</DependentUpon>
     </Compile>
+    <Compile Include="NFACONVERTIDOADFA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFACONVERTIDOADFA.Designer.cs">
+      <DependentUpon>NFACONVERTIDOADFA.cs</DependentUpon>
+    </Compile>
     <Compile Include="NFA_E.cs" />
     <Compile Include="NFA_Epsilon.cs" />
     <Compile Include="Program.cs" />
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NFA.resx">
       <DependentUpon>NFA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFACONVERTIDOADFA.resx">
+      <DependentUpon>NFACONVERTIDOADFA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

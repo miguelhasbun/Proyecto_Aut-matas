@@ -13,6 +13,7 @@ namespace Proyecto_Autómatas
     public partial class DFA_EPSILON : Form
     {
         NFA_Epsilon nfa;
+        private string vacio = "ø";
         public DFA_EPSILON()
         {
             InitializeComponent();
@@ -57,6 +58,8 @@ namespace Proyecto_Autómatas
 
                 for (int j = 1; j < dgt1.ColumnCount; j++)
                 {
+                    
+                  
                     string[] tmpdt = dgt1.Rows[i].Cells[j].Value.ToString().Split(',');
                     for (int t = 0; t < tmpdt.Length; t++)
                     {

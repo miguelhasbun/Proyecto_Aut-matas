@@ -10,9 +10,16 @@ namespace Proyecto_Autómatas
     {
         public string arista;
         public string  nextstate;
+        public string estad;
         public Transiciones(string ar, string next)
         {
             arista = ar;
+            nextstate = next;
+        }
+        public Transiciones(string estado, string arist, string next)
+        {
+            estad = estado;
+            arista = arist;
             nextstate = next;
         }
         

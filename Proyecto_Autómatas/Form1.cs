@@ -15,7 +15,7 @@ namespace Proyecto_Autómatas
     
     public partial class Form1 : Form
     {
-        ManagerDFA ina;
+        public ManagerDFA ina;
         public Form1()
         {
             InitializeComponent();
@@ -53,7 +53,43 @@ namespace Proyecto_Autómatas
             evaluarcadena();
         }
 
+        public void cargartableDFA()
+        {
+            dgv1.Columns.Clear();
 
+            string[] array = ina.getstate();
+
+            //CODIGO NECESARIO PARA CREAR LAS COLUMNAS AUTOMÁTICAMENTE.
+            string[] cadenarreglo = ina.alfa;
+            int longitud = cadenarreglo.Length;
+            dgv1.ColumnCount = longitud + 1;
+            dgv1.Columns[0].Name = "Estados";
+
+
+            for (int i = 0; i < cadenarreglo.Length; i++)
+            {
+                dgv1.Columns[i + 1].Name = cadenarreglo[i];
+
+            }
+
+            //CODIGO NECESARIO PARA CREAR LAS FILAS.
+            int p = dgv1.Rows.Count;
+            DataGridView xq = new DataGridView();
+            dgv1.RowCount = array.Length;
+            int longi = array.Length;
+            for (int i = 0; i < longi; i++)
+            {
+                dgv1.Rows[i].SetValues(array[i]);
+            }
+
+            for (int i=0; i < dgv1.Rows.Count; i++)
+            {
+                for (int j=1; j < dgv1.Columns.Count; j++)
+                {
+                    dgv1.Rows[i].Cells[j].Value =  ina.gettransicion(dgv1.Rows[i].Cells[0].Value.ToString(), dgv1.Columns[j].Name.ToString()).nextstate ;
+                }
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             //string fileJson = File.ReadAllText(@"C:\Users\Miguel Hasbun\Documents\JsonConvert.json");
@@ -178,6 +214,11 @@ namespace Proyecto_Autómatas
             }
             MessageBox.Show(ina.isaceptado() ? "Aceptado" : "No aceptado");
             ina.reset();
+        }
+
+        public void setdfamanager(ManagerDFA dt)
+        {
+            ina = dt;
         }
 
         private void Form1_Load(object sender, EventArgs e)

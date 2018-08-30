@@ -11,3 +11,4 @@ C:\Users\Miguel Hasbun\documents\visual studio 2015\Projects\Proyecto_Autómatas
 C:\Users\Miguel Hasbun\documents\visual studio 2015\Projects\Proyecto_Autómatas\Proyecto_Autómatas\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Miguel Hasbun\documents\visual studio 2015\Projects\Proyecto_Autómatas\Proyecto_Autómatas\obj\Debug\Proyecto_Autómatas.NFA.resources
 C:\Users\Miguel Hasbun\documents\visual studio 2015\Projects\Proyecto_Autómatas\Proyecto_Autómatas\obj\Debug\Proyecto_Autómatas.DFA_EPSILON.resources
+C:\Users\Miguel Hasbun\documents\visual studio 2015\Projects\Proyecto_Autómatas\Proyecto_Autómatas\obj\Debug\Proyecto_Autómatas.NFACONVERTIDOADFA.resources

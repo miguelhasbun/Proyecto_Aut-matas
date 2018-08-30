@@ -43,7 +43,7 @@
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnconvert = new System.Windows.Forms.Button();
             this.btnhome = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgt1)).BeginInit();
             this.SuspendLayout();
@@ -192,14 +192,15 @@
             this.btnhome.UseVisualStyleBackColor = true;
             this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(120, 566);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 45);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(728, 548);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(167, 81);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Convertir A DFA";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // NFA
             // 
@@ -207,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(972, 636);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnhome);
             this.Controls.Add(this.btnconvert);
             this.Controls.Add(this.btnguardar);
@@ -246,6 +247,6 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnconvert;
         private System.Windows.Forms.Button btnhome;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -8,11 +8,11 @@ namespace Proyecto_Autómatas
 {
     public class ManagerDFA
     {
-        string ein;
-        string[] efin;
-        Estados[] et;
-        string[] alfa;
-        string currentstate;
+        public string ein;
+        public string[] efin;
+        public Estados[] et;
+        public string[] alfa;
+        public string currentstate;
         public ManagerDFA(string ei, string[] ef, Estados[] e, string[] al)
         {
             ein = ei;
@@ -21,7 +21,18 @@ namespace Proyecto_Autómatas
             alfa = al;
             currentstate = ei;
         }
-        public Boolean isaceptado()
+
+        public string[] getstate()
+        {
+            List<string> ot = new List<string>();
+            foreach(Estados e in et)
+            {
+                ot.Add(e.estado);
+            }
+            return ot.ToArray();
+        }
+
+        public bool isaceptado()
         {
             for (int i=0; i < efin.Length; i++)
             {
@@ -58,11 +69,31 @@ namespace Proyecto_Autómatas
         }
         Estados statesiguiente(string est, Estados e)
         {
+            if (e == null) return null;
+            if (e.tran == null)
+            {
+                return null;
+            }
             for (int i=0; i<e.tran.Count; i++)
             {
                 if(e.tran[i].arista== est)
                 {
                     return currenstatea(e.tran[i].nextstate);
+                }
+            }
+            return null;
+        }
+
+        public Transiciones gettransicion(string nombreest, string arista)
+        {
+            foreach(Estados eta in et)
+            {
+                foreach(Transiciones op in eta.tran)
+                {
+                    if (eta.estado== nombreest && op.arista==arista)
+                    {
+                        return op;
+                    }
                 }
             }
             return null;
