@@ -120,6 +120,13 @@ namespace Proyecto_Autómatas
         {
             createnfa();
             MessageBox.Show("DFA CREADO");
+            nfa.getalltransicionesDFA();
+            foreach (Transiciones et in nfa.getalltransicionesDFA())
+            {
+                MessageBox.Show(et.nextstate);
+            }
+            
+
         }
 
         private void txtnumestadosnfa_TextChanged(object sender, EventArgs e)

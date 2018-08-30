@@ -20,5 +20,30 @@ namespace Proyecto_Autómatas
             estados = e;
         }
 
+        public Transiciones gettransicion(string name_state, string input)
+        {
+            foreach(Estados i in estados)
+            {
+               foreach(Transiciones e in i.getransicion(alfab))
+                {
+                    if (i.estado== name_state && e.arista==input)
+                    {
+                        return e;
+                    }
+                }
+               
+            }
+            return null;
+        }
+        public Transiciones[] getalltransicionesDFA()
+        {
+            List<Transiciones> tnDFA = new List<Transiciones>();
+            foreach(string t in alfab)
+            {
+                tnDFA.Add(gettransicion(estd_inicial, t));
+            }
+            return tnDFA.ToArray();
+        }
+
     }
 }

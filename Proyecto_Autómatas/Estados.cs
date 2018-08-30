@@ -41,6 +41,45 @@ namespace Proyecto_Autómatas
             tran.Add(new Transiciones(entry, new_state));
 
         }
+        public Transiciones[] getransicion()
+        {
+            return tran.ToArray();
+        }
+        public Transiciones[] getransicion(string [] alfabeto)
+        {
+            return unirtrans(alfabeto);
+        }
+
+
+        public Transiciones[] unirtrans(string[] alfabeto)
+        {
+
+            List<Transiciones> taq = new List<Transiciones>();
+                foreach(string ta in alfabeto)
+                {
+                string temp = "";
+                for (int i = 0; i < tran.Count; i++)
+                {
+                    if (tran[i].arista == ta)
+                    {
+                        temp += tran[i].nextstate;
+                      
+                       
+                    }
+                    if (i != (tran.Count - 1)&& tran[i].arista==ta)
+                    {
+                        temp += ",";
+                    }
+
+
+                }
+                taq.Add(new Transiciones(ta, temp));
+
+                }
+            return taq.ToArray();
+        }
+        
+        }
 
     }
-}
+

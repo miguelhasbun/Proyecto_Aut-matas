@@ -92,8 +92,6 @@ namespace Proyecto_Autómatas
             dgt1.Columns[0].Name = "Estados";
             dgt1.Columns[1].Name = "ε";
 
-            //aqui hay problemas
-            MessageBox.Show(cadenarreglo[0]);
             for (int i = 0; i < cadenarreglo.Length; i++)
             {
               dgt1.Columns[i+2].Name=cadenarreglo[i];
@@ -131,8 +129,13 @@ namespace Proyecto_Autómatas
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
+            
+            createnfa();
+        }
+
+        private void btnconvert_Click(object sender, EventArgs e)
+        {
             generatetable();
-            //createnfa();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Proyecto_Autómatas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DFA_EPSILON());
+            Application.Run(new NFA());
         }
     }
 }

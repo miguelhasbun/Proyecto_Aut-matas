@@ -179,6 +179,7 @@
             this.btnconvert.Size = new System.Drawing.Size(66, 68);
             this.btnconvert.TabIndex = 27;
             this.btnconvert.UseVisualStyleBackColor = true;
+            this.btnconvert.Click += new System.EventHandler(this.btnconvert_Click);
             // 
             // btnguardar
             // 

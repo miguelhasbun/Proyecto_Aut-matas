@@ -15,6 +15,7 @@ namespace Proyecto_Autómatas
             arista = ar;
             nextstate = next;
         }
+        
 
 
     }

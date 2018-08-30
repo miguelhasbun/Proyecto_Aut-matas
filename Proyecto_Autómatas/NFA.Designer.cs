@@ -43,6 +43,7 @@
             this.btnguardar = new System.Windows.Forms.Button();
             this.btnconvert = new System.Windows.Forms.Button();
             this.btnhome = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgt1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtalfabetonfa);
             this.panel1.Location = new System.Drawing.Point(36, 95);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(898, 224);
             this.panel1.TabIndex = 21;
@@ -78,7 +79,7 @@
             // 
             this.txtEstadoInicialnfa.Enabled = false;
             this.txtEstadoInicialnfa.Location = new System.Drawing.Point(714, 88);
-            this.txtEstadoInicialnfa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEstadoInicialnfa.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstadoInicialnfa.Name = "txtEstadoInicialnfa";
             this.txtEstadoInicialnfa.Size = new System.Drawing.Size(136, 30);
             this.txtEstadoInicialnfa.TabIndex = 25;
@@ -96,7 +97,7 @@
             // txtestadosfinalesnfa
             // 
             this.txtestadosfinalesnfa.Location = new System.Drawing.Point(288, 162);
-            this.txtestadosfinalesnfa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtestadosfinalesnfa.Margin = new System.Windows.Forms.Padding(4);
             this.txtestadosfinalesnfa.Name = "txtestadosfinalesnfa";
             this.txtestadosfinalesnfa.Size = new System.Drawing.Size(301, 30);
             this.txtestadosfinalesnfa.TabIndex = 23;
@@ -114,7 +115,7 @@
             // txtnumestadosnfa
             // 
             this.txtnumestadosnfa.Location = new System.Drawing.Point(288, 95);
-            this.txtnumestadosnfa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnumestadosnfa.Margin = new System.Windows.Forms.Padding(4);
             this.txtnumestadosnfa.Name = "txtnumestadosnfa";
             this.txtnumestadosnfa.Size = new System.Drawing.Size(214, 30);
             this.txtnumestadosnfa.TabIndex = 21;
@@ -143,7 +144,7 @@
             // txtalfabetonfa
             // 
             this.txtalfabetonfa.Location = new System.Drawing.Point(288, 27);
-            this.txtalfabetonfa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtalfabetonfa.Margin = new System.Windows.Forms.Padding(4);
             this.txtalfabetonfa.Name = "txtalfabetonfa";
             this.txtalfabetonfa.Size = new System.Drawing.Size(342, 30);
             this.txtalfabetonfa.TabIndex = 19;
@@ -191,12 +192,22 @@
             this.btnhome.UseVisualStyleBackColor = true;
             this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(120, 566);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 45);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // NFA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(972, 636);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnhome);
             this.Controls.Add(this.btnconvert);
             this.Controls.Add(this.btnguardar);
@@ -204,7 +215,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NFA";
@@ -235,5 +246,6 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btnconvert;
         private System.Windows.Forms.Button btnhome;
+        private System.Windows.Forms.Button button1;
     }
 }
